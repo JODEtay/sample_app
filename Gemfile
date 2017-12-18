@@ -1,37 +1,41 @@
-source 'https://rubygems.org'
-ruby "2.3.4"
+# Ruby on Rails Tutorial sample application
 
-gem 'rails',        '5.1.2'
-gem 'puma',         '3.9.1'
-gem 'sass-rails',   '5.0.6'
-gem 'uglifier',     '3.2.0'
-gem 'coffee-rails', '4.2.2'
-gem 'jquery-rails', '4.3.1'
-gem 'turbolinks',   '5.0.1'
-gem 'jbuilder',     '2.7.0'
+This is the sample application for
+[*Ruby on Rails Tutorial:
+Learn Web Development with Rails*](http://www.railstutorial.org/)
+by [Michael Hartl](http://www.michaelhartl.com/).
 
-group :development, :test do
-  gem 'sqlite3', '1.3.13'
-  gem 'byebug',  '9.0.6', platform: :mri
-end
+## License
 
-group :development do
-  gem 'web-console',           '3.5.1'
-  gem 'listen',                '3.1.5'
-  gem 'spring',                '2.0.2'
-  gem 'spring-watcher-listen', '2.0.1'
-end
+All source code in the [Ruby on Rails Tutorial](http://railstutorial.org/)
+is available jointly under the MIT License and the Beerware License. See
+[LICENSE.md](LICENSE.md) for details.
 
-group :test do
-  gem 'rails-controller-testing', '1.0.2'
-  gem 'minitest-reporters',       '1.1.14'
-  gem 'guard',                    '2.13.0'
-  gem 'guard-minitest',           '2.4.4'
-end
+## Getting started
 
-group :production do
-  gem 'pg', '0.18.4'
-end
+To get started with the app, clone the repo and then install the needed gems:
 
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+```
+$ bundle install --without production
+```
+
+Next, migrate the database:
+
+```
+$ rails db:migrate
+```
+
+Finally, run the test suite to verify that everything is working correctly:
+
+```
+$ rails test
+```
+
+If the test suite passes, you'll be ready to run the app in a local server:
+
+```
+$ rails server
+```
+
+For more information, see the
+[*Ruby on Rails Tutorial* book](http://www.railstutorial.org/book).
